@@ -73,7 +73,7 @@ namespace ExercicioConsole
 
 
             foreach (var value in Dicionario)
-            {]
+            {
 
 
                 Console.WriteLine("{0}", value);
