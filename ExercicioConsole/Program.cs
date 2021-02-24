@@ -58,30 +58,30 @@ namespace ExercicioConsole
             //
             int Valor;
             //Dictionary<string, int>.ValueCollection values = Dicionario.Values;
-            for (int i = 0; i < Array.Length; i++)
-            {
-                if(Dicionario.TryGetValue(Array[i], out Valor))
-                {
-                    Mensagem += Valor;
-                }
-
-            }
-            Console.WriteLine(Mensagem);
-            Console.ReadLine();
-
-
-
-
-            //foreach (var value in Dicionario)
+            //for (int i = 0; i < Array.Length; i++)
             //{
-            //    for (int i = 0; i < Array.Length; i++)
+            //    if(Dicionario.TryGetValue(Array[i], out Valor))
             //    {
-            //        if (Array.ElementAt(i).value)
-            //        {
-            //            
-            //        }
+            //        Mensagem += Valor;
             //    }
+
             //}
+            //Console.WriteLine(Mensagem);
+            //Console.ReadLine();
+
+
+
+
+            foreach (var value in Dicionario)
+            {]
+
+
+                Console.WriteLine("{0}", value);
+                    
+                        
+                    
+                
+            }
 
             {
                 
