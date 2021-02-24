@@ -15,14 +15,13 @@ namespace ExercicioConsole
                 Console.BackgroundColor = ConsoleColor.DarkGreen;
                 Console.ForegroundColor = ConsoleColor.Black;
                 Console.WriteLine("Conversor Teclado Alfanumérico");
-                Console.ReadKey();
             }
 
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Digite a palavra que queira converter");
             //string Palavras = Console.ReadLine();
-            string[] Array = new string[] {Console.ReadLine()};            
+            char[] Array = Console.ReadLine().ToArray();
             string Mensagem = string.Empty;
 
             Dictionary<string, int> Dicionario = new Dictionary<string, int>();
@@ -55,54 +54,23 @@ namespace ExercicioConsole
             Dicionario.Add(" ", 0);
 
 
-            //
-            int Valor;
-            //Dictionary<string, int>.ValueCollection values = Dicionario.Values;
-            //for (int i = 0; i < Array.Length; i++)
-            //{
-            //    if(Dicionario.TryGetValue(Array[i], out Valor))
-            //    {
-            //        Mensagem += Valor;
-            //    }
-
-            //}
-            //Console.WriteLine(Mensagem);
-            //Console.ReadLine();
-
-
-
-
-            foreach (string value in Array)
-            {
-
-                if (Dicionario.ContainsKey(value))
-                {
-                    Mensagem += value;
-                }
-                //Console.WriteLine("{0}", value);
-                    
-                        
-                    
-                
-            }
-
-            {
-                
-                //if (Dicionario.ContainsKey(Array))
-                //{
-                //    //int code = Dicionario[key];
-                //    Console.WriteLine("{0}");
-                //    Console.ReadLine();
-                //}
-
-            }
             
 
-          
 
+            string CACA = string.Empty;
+            int Valor;
+            foreach (var key in Array)
+            {
+                if (Dicionario.ContainsKey(key.ToString().ToUpper()))
+                {
+                    CACA = key.ToString().ToUpper(); 
+                    Dicionario.TryGetValue(CACA, out Valor);
+                    Mensagem += Valor;
+                }
+            }
             Console.WriteLine(Mensagem);
             Console.ReadLine();
-            
+
 
         }
     }
