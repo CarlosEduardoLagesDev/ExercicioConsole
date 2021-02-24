@@ -72,11 +72,14 @@ namespace ExercicioConsole
 
 
 
-            foreach (var value in Dicionario)
+            foreach (string value in Array)
             {
 
-
-                Console.WriteLine("{0}", value);
+                if (Dicionario.ContainsKey(value))
+                {
+                    Mensagem += value;
+                }
+                //Console.WriteLine("{0}", value);
                     
                         
                     
@@ -97,10 +100,9 @@ namespace ExercicioConsole
 
           
 
-            //Console.WriteLine(Mensagem);
+            Console.WriteLine(Mensagem);
             Console.ReadLine();
-            //Console.WriteLine(Mensagem);
-            //Console.ReadLine();
+            
 
         }
     }
